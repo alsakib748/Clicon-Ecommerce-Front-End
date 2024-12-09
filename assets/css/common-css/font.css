@@ -1,0 +1,60 @@
+.font-14-white{
+    color: var(--Gray-00, #FFF);
+
+/* Body/Small/500 */
+font-family: "Public Sans";
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 20px; /* 142.857% */
+}
+
+.font-24-white{
+color: var(--Gray-00, #FFF);
+font-family: "Public Sans";
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: 32px; /* 133.333% */
+}
+
+.font-14-black{
+
+}
+
+.font-16-black{
+    
+}
+
+.font-20-black{
+color: var(--Gray-900, #191C1F);
+font-family: "Public Sans";
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: 28px;
+}
+
+.font-14-grey{
+    
+}
+
+.font-16-grey{
+    
+}
+
+.font-20-grey{
+    
+}
+
+.font-14-green{
+    
+}
+
+.font-16-green{
+    
+}
+
+.font-20-green{
+    
+}
