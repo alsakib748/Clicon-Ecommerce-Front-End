@@ -32,12 +32,25 @@ $(document).ready(function() {
 $(document).ready(function() {
     $('#all-categories').click(function() {
         $('#all-categories-menu').toggleClass("d-none");
+        $(this).find("#all-categories-menu .nav-item").toggleClass("active");
     });
 });
 
 
 $(document).ready(function() {
-    $('#nav-item-menu').hover(function() {
+  $(".all-categories-menu .nav-item").removeClass("nav-active");
+
+  $('.all-categories-menu .nav-item').click(function() {
+
+      $(this).closest(".all-categories-menu").find(".nav-item").removeClass("nav-active");
+
+      $(this).addClass("nav-active");
+  });
+});
+
+$(document).ready(function() {
+    $('#nav-item-menu').click(function() {
+        $('#all-categories-menu').toggleClass("d-none");
         $('#all-categories-menu-item').toggleClass("d-none");
     });
 });
@@ -415,4 +428,23 @@ $(document).ready(function(){
   });
 
 
+});
+
+
+$(document).ready(function() {
+  $(".dashboard-card .nav-item").click(function() {
+      $(".dashboard-card .nav-item").removeClass("nav-item-active");
+      $(this).addClass("nav-item-active");
+
+      $(".dashboard-card .nav-item .nav-link .icon").removeClass("nav-link-active");
+      $(this).find(".nav-link .icon").addClass("nav-link-active");
+
+      $(".dashboard-card .nav-item .nav-link .text").removeClass("nav-link-active");
+      $(this).find(".nav-link .text").addClass("nav-link-active");
+
+      // Close the offcanvas menu
+      var offcanvasElement = document.getElementById('offcanvasShopSidebar');
+      var offcanvasInstance = bootstrap.Offcanvas.getInstance(offcanvasElement);
+      offcanvasInstance.hide();
+  });
 });

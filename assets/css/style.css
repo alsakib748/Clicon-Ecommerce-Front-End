@@ -728,6 +728,13 @@ cursor: pointer;
     box-shadow: 0px -1px 0px 0px #E4E7E9 inset;
 }
 
+.nav-active{
+
+    border-radius: 6px;
+    background: var(--Gray-50, #F2F4F5);
+    
+}
+
 .navigation .all-categories-menu .nav-item:hover{
 
 border-radius: 6px;
@@ -12070,15 +12077,15 @@ line-height: 20px;
 margin-left: 5px;
 }
 
-.nav-item-active{
+.dashboard .sidebar .nav-item-active{
     background: var(--Primary-500, #FA8232);
 }
 
-.nav-link-active{
+.dashboard .sidebar .nav-link-active{
     color: white !important;
 }
 
-.nav-link-active svg{
+.dashboard .sidebar .nav-link-active svg{
     color: white !important;
 }
 
@@ -13459,13 +13466,129 @@ line-height: 20px; /* 142.857% */
     margin-right: 8px;
 }
 
-/**********************************************Order Details Page CSS End*************************************************************/
+/***********************************************Order Details Page CSS End***************************************************************/
+
+/*************************************************Setting Page CSS Start***************************************************************/
+
+.setting-page .save-changes{
+    border: none;
+    outline: none;
+    display: flex;
+padding: 0px 24px;
+justify-content: center;
+align-items: center;
+gap: 8px;
+border-radius: 2px;
+background: var(--Primary-500, #FA8232);
+
+color: var(--Gray-00, #FFF);
+font-family: "Public Sans";
+font-size: 14px;
+font-style: normal;
+font-weight: 700;
+line-height: 48px; 
+letter-spacing: 0.168px;
+text-transform: uppercase;
+}
+
+.setting-page .form-control{
+    display: flex;
+height: 44px;
+padding: 12px 16px;
+justify-content: center;
+align-items: center;
+gap: 305px;
+align-self: stretch;
+
+border-radius: 2px;
+border: 1px solid var(--Gray-100, #E4E7E9);
+background: var(--Gray-00, #FFF);
+
+color: var(--Gray-700, #475156);
+font-family: "Public Sans";
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; 
+}
+
+.setting-page select, .setting-page select option{
+    display: flex;
+    height: 44px;
+    padding: 12px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 118px;
+    align-self: stretch;
+
+    border-radius: 2px;
+border: 1px solid var(--Gray-100, #E4E7E9);
+
+
+color: var(--Gray-700, #475156);
+font-family: "Public Sans";
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px;
+}
+
+/*************************************************Setting Page CSS End****************************************************************/
 
 /********************************************************Blog Details Section CSS End****************************************************/
 
 /***todo:************************************************Blog Page Section CSS End********************************************************/
 
 /***************************************************Track Order Page Media Queries End**************************************************/
+
+/***************************************************Setting Page Media Queries Start****************************************************/
+@media(min-width: 770px) AND (max-width: 1024px){
+    .setting-page .save-changes{
+        border: none;
+        outline: none;
+        display: flex;
+    padding: 0px 14px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 2px;
+    background: var(--Primary-500, #FA8232);
+    
+    color: var(--Gray-00, #FFF);
+    font-family: "Public Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px; 
+    letter-spacing: 0.168px;
+    text-transform: uppercase;
+    }
+}
+
+@media(min-width: 430px) AND (max-width: 768px){
+    .setting-page .save-changes{
+        border: none;
+        outline: none;
+        display: flex;
+    padding: 0px 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    border-radius: 2px;
+    background: var(--Primary-500, #FA8232);
+    
+    color: var(--Gray-00, #FFF);
+    font-family: "Public Sans";
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 45px; 
+    letter-spacing: 0.168px;
+    text-transform: uppercase;
+    }
+}
+
+/****************************************************Setting Page Media Queries End*****************************************************/
 
 /***************************************************Dashboard Page Media Quereis Start***************************************************/
 @media (min-width: 300px) AND (max-width: 768px){
@@ -25093,6 +25216,7 @@ color: black;
     border-radius: 2px;
     background: var(--Gray-50, #F2F4F5);
     cursor: pointer;
+    flex-shrink: 0;
     }
     
     .navigation .all-categories-menu{
